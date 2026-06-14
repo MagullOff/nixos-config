@@ -1,13 +1,10 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.laptopConfiguration = { pkgs, lib, ... }: {
+  flake.nixosModules.homelabConfiguration = { pkgs, lib, ... }: {
     imports = [
-      self.nixosModules.laptopHardware
+      #self.nixosModules.homelabHardware
       self.nixosModules.core
-      self.nixosModules.desktop
-      self.nixosModules.scripts
-      self.nixosModules.ssh
-      self.nixosModules.jellyfin
+      self.nixosModules.openssh
     ];
 
     boot.loader.systemd-boot.enable = true;
@@ -16,14 +13,12 @@
 
     users.users.magulloff = {
       isNormalUser = true;
-      description = "magulloff";
+      description = "homelab";
       extraGroups = [ "networkmanager" "wheel" "docker" ];
     };
     time.timeZone = "Europe/Warsaw";
 
-    virtualisation.docker.enable = true;
-
-    system.stateVersion = "25.05";
+    #system.stateVersion = "25.05";
   };
 
 }
