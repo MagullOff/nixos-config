@@ -7,7 +7,6 @@
       ports = [ 22 ];
       settings = {
         PasswordAuthentication = true;
-        AllowUsers = [ "homelab" ];
       };
     };
 
