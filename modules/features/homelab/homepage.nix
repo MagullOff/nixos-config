@@ -3,7 +3,7 @@
 
     services.homepage-dashboard = {
       enable = true;
-      listenPort = 80; 
+      listenPort = 8082;
       
       widgets = [
         {
@@ -20,24 +20,14 @@
           "Serwisy" = [
             {
               "Jellyfin" = {
-                href = "homelab:8096";
+                href = "http://homelab:8096"; 
                 description = "Mamy Netflix w domu";
               };
             }
             {
               "AdGuard" = {
-                href = "homelab:3000";
+                href = "http://homelab:3000";
                 description = "Serwer DNS";
-              };
-            }
-          ];
-        }
-        {
-          "Custom Actions" = [
-            {
-              "Home Assistant" = {
-                icon = "home-assistant.png";
-                href = "http://homeassistant.local:8123";
               };
             }
           ];
@@ -52,7 +42,7 @@
       };
     };
 
-    networking.firewall.allowedTCPPorts = [ 80 ];
+    networking.firewall.allowedTCPPorts = [ 8082 ];
 
   };
 }
