@@ -6,9 +6,11 @@
       openFirewall = true;
     };
 
-    services.resolved.extraConfig = ''
-      DNSStubListener=no
-    '';
+    services.resolved.settings = {
+      Resolve = {
+        DNSStubListener = "no";
+      };
+    };
 
     networking.firewall.allowedTCPPorts = [ 3000 80 ];
   };
