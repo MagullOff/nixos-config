@@ -5,7 +5,7 @@
       enable = true;
       listenPort = 8082;
 
-      allowedHosts = [ "homelab" "localhost" "127.0.0.1" "196.168.1.14" ];
+      allowedHosts = "homelab,localhost,127.0.0.1,192.168.1.14";
       
       widgets = [
         {
