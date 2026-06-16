@@ -4,6 +4,10 @@
     services.homepage-dashboard = {
       enable = true;
       listenPort = 8082;
+
+      environmentFile = pkgs.writeText "homepage-env" ''
+        HOMEPAGE_ALLOWED_HOSTS="196.168.1.14,homelab,localhost"
+      '';
       
       widgets = [
         {
@@ -41,10 +45,6 @@
         };
       };
     };
-
-    systemd.services.homepage-dashboard.serviceConfig.Environment = [
-      "196.168.1.14,homelab,localhost"
-    ];
 
     networking.firewall.allowedTCPPorts = [ 8082 ];
 
