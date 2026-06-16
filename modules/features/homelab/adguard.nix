@@ -3,15 +3,15 @@
 
     services.adguardhome = {
       enable = true;
-      openFirewall = true;
+      openFirewall = true; 
     };
 
-    services.resolved.settings = {
-      Resolve = {
-        DNSStubListener = "no";
-      };
-    };
+    services.resolved.enable = false;
 
-    networking.firewall.allowedTCPPorts = [ 3000 80 ];
+    networking.firewall = {
+      enable = true;
+      allowedTCPPorts = [ 80 3000 53 ];
+      allowedUDPPorts = [ 53 ];
+    };
   };
 }

@@ -22,6 +22,7 @@
 
     virtualisation.docker.enable = true;
     networking.nameservers = [ "192.168.1.14" ];
+    networking.networkmanager.insertNameservers = [ "192.168.1.14" ];
 
     system.stateVersion = "25.05";
   };
