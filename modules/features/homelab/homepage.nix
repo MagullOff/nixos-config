@@ -5,8 +5,6 @@
       enable = true;
       listenPort = 8082;
 
-      allowedHosts = "homelab,localhost,127.0.0.1,192.168.1.14";
-      
       widgets = [
         {
           resources = {
@@ -45,6 +43,10 @@
     };
 
     networking.firewall.allowedTCPPorts = [ 8082 ];
+
+    systemd.services.homepage-dashboard.serviceConfig.Environment = lib.mkForce [
+      "HOMEPAGE_ALLOWED_HOSTS=homelab,localhost,127.0.0.1,192.168.1.14"
+    ];
 
   };
 }
