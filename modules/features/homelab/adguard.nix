@@ -1,22 +1,15 @@
 { self, inputs, ... }: {
-  flake.nixosModules.adguard = { config, pkgs, ... }:
-  {
+  flake.nixosModules.adguard = { config, pkgs, ... }: {
 
     services.adguardhome = {
       enable = true;
       openFirewall = true;
-      settings = {
-        http = {
-          address = "0.0.0.0:3000";
-        };
-        dns = {
-          bind_hosts = [ "0.0.0.0" ];
-          port = 53;
-        };
-      };
     };
 
-    networking.firewall.allowedTCPPorts = [ 3000 ];
+    services.resolved.extraConfig = ''
+      DNSStubListener=no
+    '';
 
+    networking.firewall.allowedTCPPorts = [ 3000 80 ];
   };
 }

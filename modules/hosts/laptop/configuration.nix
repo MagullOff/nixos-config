@@ -21,6 +21,7 @@
     time.timeZone = "Europe/Warsaw";
 
     virtualisation.docker.enable = true;
+    networking.nameservers = [ "192.168.1.14" ];
 
     system.stateVersion = "25.05";
   };
