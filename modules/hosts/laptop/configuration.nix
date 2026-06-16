@@ -7,8 +7,6 @@
       self.nixosModules.desktop
       self.nixosModules.scripts
       self.nixosModules.ssh
-      self.nixosModules.jellyfin
-      self.nixosModules.fastfetch
     ];
 
     boot.loader.systemd-boot.enable = true;

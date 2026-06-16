@@ -4,8 +4,7 @@
     imports = [
       self.nixosModules.homelabHardware
       self.nixosModules.core
-      self.nixosModules.openssh
-      self.nixosModules.fastfetch
+      self.nixosModules.homelab
     ];
 
     boot.loader.systemd-boot.enable = true;
@@ -19,7 +18,8 @@
     };
     time.timeZone = "Europe/Warsaw";
 
-    #system.stateVersion = "25.05";
+    virtualisation.docker.enable = true;
+
   };
 
 }

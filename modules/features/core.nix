@@ -28,6 +28,11 @@
       git-credential-manager ranger w3m ueberzugpp highlight bat gdu
       atool ffmpegthumbnailer mediainfo poppler-utils odt2txt pass
       catimg chafa exiftool lazygit docker docker-compose gnupg makeWrapper
+      fastfetch
     ];
+
+    programs.bash.interactiveShellInit = ''
+      fastfetch
+    '';
   };
 }
