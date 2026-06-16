@@ -42,9 +42,9 @@
       };
     };
 
-    systemd.services.homepage-dashboard.environment = {
-      HOMEPAGE_ALLOWED_HOSTS = "196.168.1.14,homelab,localhost";
-    };
+    systemd.services.homepage-dashboard.serviceConfig.Environment = [
+      "196.168.1.14,homelab,localhost"
+    ];
 
     networking.firewall.allowedTCPPorts = [ 8082 ];
 
