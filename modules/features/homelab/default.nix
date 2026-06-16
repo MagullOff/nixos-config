@@ -4,6 +4,7 @@
       self.nixosModules.jellyfin
       self.nixosModules.openssh
       self.nixosModules.adguard
+      self.nixosModules.homepage
     ];
   };
 }
