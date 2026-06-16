@@ -1,4 +1,4 @@
-{ self, inputs, ... }: {
+{ self, inputs, lib, ... }: {
   flake.nixosModules.homepage = { config, pkgs, ... }: {
 
     services.homepage-dashboard = {
