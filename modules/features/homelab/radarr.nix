@@ -4,5 +4,7 @@
       enable = true;
       openFirewall = true; 
     };
+
+    networking.firewall.allowedTCPPorts = [ 7878 ];
   };
 }
