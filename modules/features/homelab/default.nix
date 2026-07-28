@@ -10,6 +10,7 @@
       self.nixosModules.qbtorrent
       self.nixosModules.sonarr
       self.nixosModules.readarr
+      self.nixosModules.flaresolverr
     ];
   };
 }
