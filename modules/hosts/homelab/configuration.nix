@@ -20,6 +20,14 @@
 
     virtualisation.docker.enable = true;
 
+    networking.firewall.allowedTCPPorts = [
+      8080 # qBittorrent Web UI
+      8989 # Sonarr
+      7878 # Radarr
+      8787 # Readarr
+      9696 # Prowlarr
+    ];
+
   };
 
 }
