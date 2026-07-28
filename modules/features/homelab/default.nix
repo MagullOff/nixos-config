@@ -5,6 +5,11 @@
       self.nixosModules.openssh
       self.nixosModules.adguard
       self.nixosModules.homepage
+      self.nixosModules.prowlarr
+      self.nixosModules.radarr
+      self.nixosModules.qbtorrent
+      self.nixosModules.sonarr
+      self.nixosModules.readarr
     ];
   };
 }

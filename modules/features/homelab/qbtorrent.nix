@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.radarr = { config, pkgs, ... }: {
+  flake.nixosModules.qbtorrent = { config, pkgs, ... }: {
     services.qbittorrent = {
       enable = true;
       openFirewall = true;
