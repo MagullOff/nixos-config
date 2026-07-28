@@ -6,6 +6,7 @@
       self.nixosModules.audio
       self.nixosModules.kitty
       self.nixosModules.chromium
+      self.nixosModules.zen
     ];
 
     fonts.packages = with pkgs; [ 
