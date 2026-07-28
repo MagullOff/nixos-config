@@ -33,6 +33,33 @@
               };
             }
           ];
+          "Arrrr" = [
+            {
+              "qBittorent" = {
+                href = "http://homelab:8080"; 
+              };
+            }
+            {
+              "Sonarr" = {
+                href = "http://homelab:8989";
+              };
+            }
+            {
+              "Radarr" = {
+                href = "http://homelab:7878";
+              };
+            }
+            {
+              "Readarr" = {
+                href = "http://homelab:8787";
+              };
+            }
+            {
+              "Prowlarr" = {
+                href = "http://homelab:9696";
+              };
+            }
+          ];
         }
       ];
 
