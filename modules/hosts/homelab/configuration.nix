@@ -26,6 +26,7 @@
       7878 # Radarr
       8787 # Readarr
       9696 # Prowlarr
+      8191 # Flaresolverr
     ];
 
   };
