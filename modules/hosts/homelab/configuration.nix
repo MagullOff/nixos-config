@@ -27,6 +27,7 @@
       9696 # Prowlarr
       8191 # Flaresolverr
       8112 # deluge
+      2283 # immich
     ];
 
   };

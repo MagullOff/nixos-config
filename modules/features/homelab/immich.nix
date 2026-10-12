@@ -3,9 +3,10 @@
     services.immich = {
       enable = true;
       port = 2283;
-      host = "0.0.0.0"; # Makes it accessible across your local network
-      openFirewall = true; # Automatically opens the port in firewall
-      mediaLocation = "/var/lib/immich"; # Default directory for stored media
+      host = "0.0.0.0";
+      openFirewall = true;
+      allowedTCPPorts = [ 2283 ];
+      mediaLocation = "/var/lib/immich";
     };
   };
 }
