@@ -27,6 +27,12 @@
               };
             }
             {
+              "Immich" = {
+                href = "http://homelab:2283";
+                description = "Obraz";
+              };
+            }
+            {
               "AdGuard" = {
                 href = "http://homelab:3000";
                 description = "Serwer DNS";
