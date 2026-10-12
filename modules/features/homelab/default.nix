@@ -11,6 +11,7 @@
       self.nixosModules.readarr
       self.nixosModules.flaresolverr
       self.nixosModules.deluge
+      self.nixosModules.immich
     ];
   };
 }

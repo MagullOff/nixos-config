@@ -47,7 +47,7 @@
       };
     };
 
-    networking.firewall.allowedTCPPorts = [ 8082 8080 ];
+    networking.firewall.allowedTCPPorts = [ 8082 8080 2283 ];
 
   };
 }
