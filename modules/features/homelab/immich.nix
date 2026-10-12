@@ -5,7 +5,6 @@
       port = 2283;
       host = "0.0.0.0";
       openFirewall = true;
-      allowedTCPPorts = [ 2283 ];
       mediaLocation = "/var/lib/immich";
     };
   };
